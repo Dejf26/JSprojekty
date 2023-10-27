@@ -1,22 +1,49 @@
 #slider {
+    margin: 2em auto;
+    width: 600px;
+    overflow: hidden;
+  }
+  
+  #slider-wrapper {
+    width: 9999px;
+    height: 400px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  #slider-nav {
+    text-align: center;
+    margin-top: 2px;
+  }
+  
+  .slide {
+    float: left;
     width: 600px;
     height: 400px;
-    margin: 100px auto 0 auto;
+    position: relative;
     overflow: hidden;
-}
-#slider .slides {
-    display: flex;
-    animation-name: pociag-w-lewo;
-    animation-duration: 4s;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
-}
+  }
+  
+  .slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-@keyframes pociag-w-lewo {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-2000px);
-    }
-}
+.slideNav {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 4px 12px;
+    border-radius: 50%;
+  }
+  
+  .slideNav.active {
+    font-weight: bold;
+    color: #fff;
+    background-color: #005eef; 
+    border-color: #005eef;
+  }
