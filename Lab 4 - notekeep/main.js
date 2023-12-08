@@ -1,7 +1,7 @@
 const localStorageKey = 'savedNotes'
 const defaultNoteColor = '#3a9405'
 
-var notes;
+let notes;
 
 function loadNotes() {
     let localData = localStorage.getItem(localStorageKey);
