@@ -1,0 +1,134 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 0.3fr 2.4fr 0.3fr;
+    grid-template-rows: 0.5fr 2.1fr 1fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". note_container ."
+        ". note_creator ."
+        ". . .";
+    margin: 0;
+    height: 100%;
+background-color: honeydew;}
+
+.flexbox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+#note_container {
+    grid-area: note_container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.note {
+    flex: 0 0 calc(33.33% - 10px); 
+    height: fit-content;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.note-header>p[name=note-title] {
+    font-weight: bold;
+    width: 75%;
+    height: min-content;
+    margin: 5px 0;
+}
+
+.note-menu {
+    align-self: flex-end;
+}
+
+.note-icon {
+    height: 1em;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.note-content {
+    width: 100%;
+}
+
+.note-footer {
+    width: 100%;
+}
+
+.note-footer>p[name=note-date] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+#note_creator {
+    grid-area: note_creator;
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-self: center;
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#note_creator>textarea {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+input[name='save_note'] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.creator-input {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+.creator-input>label {
+    width: 100%;
+    height: fit-content;
+    font-size: 0.80em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.creator-input>input[type=text] {
+    height: fit-content;
+}
